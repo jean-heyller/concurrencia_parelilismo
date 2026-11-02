@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./gradlew compileJava)",
+      "Bash(./gradlew.bat compileJava)",
+      "Read(//c/Users/User/.jdks/**)",
+      "Read(//c/Users/User/**)",
+      "Read(//c/Program Files/**)",
+      "Bash(powershell.exe -Command \"Get-Command java -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")",
+      "Bash(powershell.exe -Command \"$env:JAVA_HOME\")",
+      "Bash(powershell.exe -Command \"Get-ChildItem 'C:\\\\Users\\\\User\\\\.jdks' -ErrorAction SilentlyContinue | Select-Object Name\")",
+      "Bash(powershell.exe -Command \"Get-ChildItem 'C:\\\\Users\\\\User' -Filter '.jdks' -Force | Select-Object FullName; Test-Path 'C:\\\\Users\\\\User\\\\.jdks'\")",
+      "Bash(powershell.exe -Command \"Get-ChildItem 'C:\\\\Users\\\\User\\\\.jdks' -Force | Select-Object Name, PSIsContainer\")",
+      "Bash(powershell.exe -Command \"dir 'C:\\\\Users\\\\User\\\\.jdks'\")",
+      "Bash(powershell.exe -Command \"Get-ChildItem 'C:\\\\Users\\\\User' -Filter '*.jdk*' -Force -Recurse -Depth 3 -ErrorAction SilentlyContinue | Select-Object FullName -First 10\")",
+      "Bash(powershell.exe -Command \"$reg = Get-ItemProperty ''HKLM:\\\\SOFTWARE\\\\JavaSoft\\\\JDK'' -ErrorAction SilentlyContinue; if \\($reg\\) { $reg } else { ''No JDK en registry'' }\")",
+      "Bash(powershell.exe -Command \"where.exe java 2>nul\")",
+      "Bash(powershell.exe -Command \"Get-ChildItem 'C:\\\\Program Files' -Filter '*jdk*' -ErrorAction SilentlyContinue | Select-Object Name; Get-ChildItem 'C:\\\\Program Files' -Filter '*java*' -ErrorAction SilentlyContinue | Select-Object Name\")",
+      "Bash(powershell.exe -Command \"Get-ChildItem 'C:\\\\Program Files\\\\Java' -ErrorAction SilentlyContinue | Select-Object Name, FullName\")",
+      "Bash(JAVA_HOME=\"C:/Program Files/Java/jdk-21.0.12.1\" ./gradlew.bat compileJava)",
+      "Bash(JAVA_HOME=\"C:/Program Files/Java/jdk-21.0.12.1\" ./gradlew.bat bootRun)",
+      "Bash(grep -v \"^$\")",
+      "Bash(JAVA_HOME=\"C:/Program Files/Java/jdk-21.0.12.1\" ./gradlew.bat run --args=\"\" -PmainClass=com.example.demo.concurrency.MemoryVisibilityExample)",
+      "Bash(JAVA_HOME=\"C:/Program Files/Java/jdk-21.0.12.1\" \"C:/Program Files/Java/jdk-21.0.12.1/bin/java\" -cp build/classes/java/main:build/resources/main com.example.demo.concurrency.MemoryVisibilityExample)",
+      "Bash(JAVA_HOME=\"C:/Program Files/Java/jdk-21.0.12.1\" \"C:/Program Files/Java/jdk-21.0.12.1/bin/java\" -cp \"build/classes/java/main\" com.example.demo.concurrency.MemoryVisibilityExample)"
+    ]
+  }
+}
